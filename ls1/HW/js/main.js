@@ -104,6 +104,7 @@ console.log(10!==10);
 console.log(10!=10);
 console.log(10>10);
 
+
 console.log(123 === '123');
 console.log(123 == '123');
 
