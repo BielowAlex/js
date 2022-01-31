@@ -1,68 +1,68 @@
 // Task1,2
-//let variable = 'hello';
-console.log(variable);
-alert(variable);
-document.write(variable);
-
-variable = 'owu';
-console.log(variable);
-alert(variable);
-document.write(" " + variable);
-
-variable = 'com';
-console.log(variable);
-alert(variable);
-document.write(" " + variable);
-
-variable = 'ua';
-console.log(variable);
-alert(variable);
-document.write(" " + variable);
-
-variable = 1;
-console.log(variable);
-alert(variable);
-document.write(" " + variable);
-
-variable = 10;
-console.log(variable);
-alert(variable);
-document.write(variable);
-
-variable = -999;
-console.log(variable);
-alert(variable);
-document.write(variable);
-
-variable = 123;
-console.log(variable);
-alert(variable);
-document.write(variable);
-
-variable = 3.14;
-console.log(variable);
-alert(variable);
-document.write(variable);
-
-variable = 2.7;
-console.log(variable);
-alert(variable);
-document.write(variable);
-
-variable = 16;
-console.log(variable);
-alert(variable);
-document.write(variable);
-
-variable = true;
-console.log(variable);
-alert(variable);
-document.write(variable);
-
-variable = false;
-console.log(variable);
-alert(variable);
-document.write(variable);
+// let variable = 'hello';
+// console.log(variable);
+// alert(variable);
+// document.write(variable);
+//
+// variable = 'owu';
+// console.log(variable);
+// alert(variable);
+// document.write(" " + variable);
+//
+// variable = 'com';
+// console.log(variable);
+// alert(variable);
+// document.write(" " + variable);
+//
+// variable = 'ua';
+// console.log(variable);
+// alert(variable);
+// document.write(" " + variable);
+//
+// variable = 1;
+// console.log(variable);
+// alert(variable);
+// document.write(" " + variable);
+//
+// variable = 10;
+// console.log(variable);
+// alert(variable);
+// document.write(variable);
+//
+// variable = -999;
+// console.log(variable);
+// alert(variable);
+// document.write(variable);
+//
+// variable = 123;
+// console.log(variable);
+// alert(variable);
+// document.write(variable);
+//
+// variable = 3.14;
+// console.log(variable);
+// alert(variable);
+// document.write(variable);
+//
+// variable = 2.7;
+// console.log(variable);
+// alert(variable);
+// document.write(variable);
+//
+// variable = 16;
+// console.log(variable);
+// alert(variable);
+// document.write(variable);
+//
+// variable = true;
+// console.log(variable);
+// alert(variable);
+// document.write(variable);
+//
+// variable = false;
+// console.log(variable);
+// alert(variable);
+// document.write(variable);
 
 //task3
 // let firstName = 'Alex', middleName = 'Nikolajevich', lastName = 'Below';
