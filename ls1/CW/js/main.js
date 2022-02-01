@@ -24,15 +24,15 @@ console.log(result)
 
 // 2. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр
 
-let book ={
-    bookName : 'Harry Potter',
-    pagesSum : 230,
-    genre : 'adventure'
-};
-console.log(book);
+// let book ={
+//     bookName : 'Harry Potter',
+//     pagesSum : 230,
+//     genre : 'adventure'
+// };
+// console.log(book);
 
 // 3. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр, автори
- book ={
+let book ={
     bookName: 'Harry Potter',
     pagesSum: 230,
     genre: 'adventure',
