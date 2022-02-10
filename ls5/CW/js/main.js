@@ -117,4 +117,28 @@ let arrRand = (arr,n)=>{
 arrRand(newArr,10);
 // - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент,
 // який характеризує кінцеве значення діапазону.
+
+let arrRandLimit = (arr,n,limit)=>{
+    let i = 0;
+    while(i<n){
+        arr[i] = Math.round(Math.random()*limit);
+        i++;
+    }
+    console.log(arr);
+}
+arrRandLimit(newArr,10,10);
+
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
+
+let arr1 = [1,2,3];
+
+let reverse = (arr)=>{
+    let ri=arr.length-1;
+    let newArr = [];
+    for (let e of arr) {
+        newArr[ri] = e;
+        ri--;
+    }
+    return newArr
+}
+console.log(reverse(arr1));
