@@ -83,7 +83,7 @@ let firstLetterToUpper = (str)=>{
 
 console.log(firstLetterToUpper("sanya"));
 
-// - Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
+// - Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери./
 
 let capitalize = (str)=>{
     let arr = str.split(" ");
