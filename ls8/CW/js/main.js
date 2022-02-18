@@ -89,3 +89,4 @@ let text2=document.getElementsByClassName('text2');
 for (const text2Element of text2) {
     text2Element.innerHTML = 'dec-2021';
 }
+//
