@@ -7,61 +7,70 @@
 //     username: 'Bret',
 //     email: 'Sincere@april.biz',
 //     address: {
-//     street: 'Kulas Light',
-//         suite: 'Apt. 556',
-//         city: 'Gwenborough',
-//         zipcode: '92998-3874',
-//         geo: {
-//         lat: '-37.3159',
-//             lng: '81.1496'
-//          }
+//              street: 'Kulas Light',
+//              suite: 'Apt. 556',
+//              city: 'Gwenborough',
+//              zipcode: '92998-3874',
+//              geo: {
+//                    lat: '-37.3159',
+//                    lng: '81.1496'
+//              }
 //     },
 //     phone: '1-770-736-8031 x56442',
 //     website: 'hildegard.org',
 //     company: {
-//     name: 'Romaguera-Crona',
-//     catchPhrase: 'Multi-layered client-server neural-net',
-//     bs: 'harness real-time e-markets'
+//               name: 'Romaguera-Crona',
+//               catchPhrase: 'Multi-layered client-server neural-net',
+//               bs: 'harness real-time e-markets'
+//     }
 // }
-// }
 
-class Person{
-    id;
-    name;
+// let Company = (name,catchPhrase,bs)=>{return new Company(this.name,this.catchPhrase,this.bs)}
 
-    username;
-    email;
-    street;
-    suite;
-    city;
-    zipcode;
-    lat;
-    lng;
-
-
-    phone;
-    website;
-    name;
-    catchPhrase;
-    bs;
-
-    constructor(id, username, email, address = {suite, city, zipcode, lat, lng}, phone, website, {name, catchPhrase, bs}) {
-        this.id = id;
-        this.username = username;
-        this.email = email;
-        this.street = street;
-        this.address = address
-        this.phone = phone;
-        this.website = website;
+class Company{
+    constructor(name, catchPhrase, bs) {
         this.name = name;
         this.catchPhrase = catchPhrase;
         this.bs = bs;
     }
 }
 
+// let Geo = (lat,lng)=>{return new Geo(lat,lng)};
+
+class Geo{
+    constructor(lat, lng) {
+        this.lat = lat;
+        this.lng = lng;
+    }
+}
+
+class Address {
+    constructor(street, suite, city, zipcode, lat, lng) {
+        this.street = street; this.suite = suite; this.city = city; this.zipcode = zipcode; this.geo = new Geo(lat, lng);
+    }
+}
+class Person{
+    constructor(id, name, username, email,street,suite,city,zipcode,lat,lng, phone, website,nameCompany,catchPhrase,bs) {
+        this.id = id;
+        this.name = name;
+        this.username = username;
+        this.email = email;
+        this.geo = new Geo(lat,lng);
+        this.address = new Address(street,suite,city,zipcode,this.geo);
+        this.phone = phone;
+        this.website = website;
+        this.company = new Company(nameCompany,catchPhrase,bs);
+    }
+}
+
+let person = new Person(1,'Leanne Graham','Bret','Sincere@april.biz','Kulas Light','Apt. 556','Gwenborough',
+                '92998-3874', '-37.3159','81.1496','1-770-736-8031 x56442','hildegard.org','Romaguera-Crona',
+              'Multi-layered client-server neural-net','harness real-time e-markets');
+console.log(person);
+
 // -  Створити функцію конструктор / клас  який описує об'єкт тегу
 // Поля :
-//     -назва тегу ()
+// -назва тегу ()
 // - опис його дій
 // - масив з атрибутами (2-3 атрибути максимум)
 // Кожен атрибут описати як окремий який буде містити
@@ -81,7 +90,7 @@ class Person{
 // Приклад результуючого об'єкту
 // {
 //     titleOfTag: 'area',
-//         action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
+//     action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
 //     attrs: [
 //     {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
 //     {/*some props and values*/},
@@ -90,3 +99,135 @@ class Person{
 // ]
 //
 // }
+
+class Attr{
+    titleOfAttr;
+    descAttr;
+
+    constructor(titleOfAttr, descAttr) {
+        this.titleOfAttr = titleOfAttr;
+        this.descAttr = descAttr;
+    }
+}
+
+class HtmlTag{
+    nameTag;
+    descTag;
+    attrs;
+
+    constructor(nameTag, descTag, attrs) {
+        this.nameTag = nameTag;
+        this.descTag = descTag;
+        this.attrs = attrs;
+    }
+}
+
+let a = new HtmlTag('<a>',`Тег <a> является одним из важных элементов HTML и предназначен для создания ссылок.`,
+    [new Attr('accesskey','Активация ссылки с помощью комбинации клавиш.'),
+          new Attr('coords','Устанавливает координаты активной области.'),
+          new Attr('download','Предлагает скачать указанный по ссылке файл.'),
+          new Attr('href','Задает адрес документа, на который следует перейти.'),
+          new Attr('hreflang','Идентифицирует язык текста по ссылке.'),
+          new Attr('name','Активация ссылки с помощью комбинации клавиш.'),
+          new Attr('rel','Устанавливает координаты активной области.'),
+          new Attr('rev','Предлагает скачать указанный по ссылке файл.'),
+          new Attr('shape   ','Задает адрес документа, на который следует перейти.'),
+          new Attr('tabindex','Идентифицирует язык текста по ссылке.'),
+          new Attr('target  ','Устанавливает имя якоря внутри документа.'),
+          new Attr('title   ','Отношения между ссылаемым и текущим документами.'),
+          new Attr('type    ','Отношения между текущим и ссылаемым документами.'),
+    ]);
+console.log(a);
+
+let div = new HtmlTag('div',`Элемент <div> является блочным элементом и предназначен для выделения фрагмента документа с целью изменения вида содержимого.`,
+           [ new Attr('align',`Задает выравнивание содержимого тега <div>.`),
+                  new Attr('title','Добавляет всплывающую подсказку к содержимому.')
+           ]);
+console.log(div);
+
+let h1 = new HtmlTag('h1',`HTML предлагает шесть заголовков разного уровня, которые показывают относительную важность секции, расположенной после заголовка. Так, тег <h1> представляет собой наиболее важный заголовок первого уровня`,[
+new Attr('align',`Задает выравнивание содержимого тега <h1>.`)
+]);
+console.log(h1);
+
+let span = new HtmlTag('span',`Тег <span> предназначен для определения строчных элементов документа.`,[
+           new Attr('accesskey      ','Позволяет получить доступ к элементу с помощью заданного сочетания клавиш.'),
+           new Attr('class          ','Определяет имя класса, которое позволяет связать тег со стилевым оформлением.'),
+           new Attr('contenteditable','Сообщает, что элемент доступен для редактирования пользователем.'),
+           new Attr('contextmenu    ','Устанавливает контекстное меню для элемента.'),
+           new Attr('dir            ','Задает направление и отображение текста — слева направо или справа налево.'),
+           new Attr('hidden         ','Скрывает содержимое элемента от просмотра.'),
+           new Attr('id             ','Указывает имя стилевого идентификатора.'),
+           new Attr('lang           ','Браузер использует значение параметра для правильного отображения некоторых национальных символов.'),
+           new Attr('spellcheck     ','Указывает браузеру проверять или нет правописание и грамматику в тексте.'),
+           new Attr('style          ','Применяется для определения стиля элемента с помощью правил CSS.'),
+           new Attr('tabindex       ','Устанавливает порядок получения фокуса при переходе между элементами с помощью клавиши Tab.'),
+           new Attr('title          ','Описывает содержимое элемента в виде всплывающей подсказки.'),
+           new Attr('xml:lang       ','Этот атрибут по своему действию похож на lang, но применяется только в XHTML-документах и указывает язык всего текста или его фрагмента.')
+]);
+
+console.log(span);
+let input = new HtmlTag('<input>',`Тег <input> является одним из разносторонних элементов формы и позволяет создавать разные элементы интерфейса и обеспечить взаимодействие с пользователем.`,[
+    new Attr('accept        ','Устанавливает фильтр на типы файлов, которые вы можете отправить через поле загрузки файлов.'),
+    new Attr('accesskey     ','Переход к элементу с помощью комбинации клавиш.'),
+    new Attr('align         ','Определяет выравнивание изображения.'),
+    new Attr('alt           ','Альтернативный текст для кнопки с изображением.'),
+    new Attr('autocomplete  ','Включает или отключает автозаполнение.'),
+    new Attr('autofocus     ','Устанавливает фокус в поле формы.'),
+    new Attr('border        ','Толщина рамки вокруг изображения.'),
+    new Attr('checked       ','Предварительно активированный переключатель или флажок.'),
+    new Attr('disabled      ','Блокирует доступ и изменение элемента.'),
+    new Attr('form          ','Связывает поле с формой по её идентификатору.'),
+    new Attr('formaction    ','Определяет адрес обработчика формы.'),
+    new Attr('formenctype   ','Устанавливает способ кодирования данных формы при их отправке на сервер.'),
+    new Attr('formmethod    ','Сообщает браузеру каким методом следует передавать данные формы на сервер.'),
+    new Attr('formnovalidate','Отменяет встроенную проверку данных на корректность.'),
+    new Attr('formtarget    ','Определяет окно или фрейм в которое будет загружаться результат, возвращаемый обработчиком формы.'),
+    new Attr('list          ','Указывает на список вариантов, которые можно выбирать при вводе текста.'),
+    new Attr('max           ','Верхнее значение для ввода числа или даты.'),
+    new Attr('maxlength     ','Максимальное количество символов разрешенных в тексте.'),
+    new Attr('min           ','Нижнее значение для ввода числа или даты.'),
+    new Attr('multiple      ','Позволяет загрузить несколько файлов одновременно.'),
+    new Attr('name          ','Имя поля, предназначено для того, чтобы обработчик формы мог его идентифицировать.'),
+    new Attr('pattern       ','Устанавливает шаблон ввода.'),
+    new Attr('placeholder   ','Выводит подсказывающий текст.'),
+    new Attr('readonly      ','Устанавливает, что поле не может изменяться пользователем.'),
+    new Attr('required      ','Обязательное для заполнения поле.'),
+    new Attr('size          ','Ширина текстового поля.'),
+    new Attr('src           ','Адрес графического файла для поля с изображением.'),
+    new Attr('step          ','Шаг приращения для числовых полей.'),
+    new Attr('tabindex      ','Определяет порядок перехода между элементами с помощью клавиши Tab.'),
+    new Attr('type          ','Сообщает браузеру, к какому типу относится элемент формы.'),
+    new Attr('value         ','Значение элемента.'),
+])
+console.log(input);
+let form = new HtmlTag('<form>',`Тег <form> устанавливает форму на веб-странице. Форма предназначена для обмена данными между пользователем и сервером. Область применения форм не ограничена отправкой данных на сервер, с помощью клиентских скриптов можно получить доступ к любому элементу формы, изменять его и применять по своему усмотрению.`,[
+new Attr('accept-charset','Устанавливает кодировку, в которой сервер может принимать и обрабатывать данные'),
+new Attr('action        ','Адрес программы или документа, который обрабатывает данные формы.'),
+new Attr('autocomplete  ','Включает автозаполнение полей формы.'),
+new Attr('enctype       ','Способ кодирования данных формы.'),
+new Attr('method        ','Метод протокола HTTP.'),
+new Attr('name          ','Имя формы.'),
+new Attr('novalidate    ','Отменяет встроенную проверку данных формы на корректность ввода.'),
+new Attr('target        ','Имя окна или фрейма, куда обработчик будет загружать возвращаемый результат.'),
+])
+console.log(form);
+let option = new HtmlTag('<option>',`Тег <option> определяет отдельные пункты списка, создаваемого с помощью контейнера <select>.`,[
+    new Attr('disabled','Заблокировать для доступа элемент списка.'),
+    new Attr('label   ','Указание метки пункта списка.'),
+    new Attr('selected','Заранее устанавливает определенный пункт списка выделенным.'),
+    new Attr('value   ','Значение пункта списка, которое будет отправлено на сервер или прочитано с помощью скриптов.'),
+]);
+console.log(option);
+let select = new HtmlTag('<select>',`Тег <select> позволяет создать элемент интерфейса в виде раскрывающегося списка, а также список с одним или множественным выбором, как показано далее.`,[
+    new Attr('accesskey','Позволяет перейти к списку с помощью некоторого сочетания клавиш.'),
+    new Attr('autofocus','Устанавливает, что список получает фокус после загрузки страницы.'),
+    new Attr('disabled ','Блокирует доступ и изменение элемента.'),
+    new Attr('form     ','Связывает список с формой.'),
+    new Attr('multiple ','Позволяет одновременно выбирать сразу несколько элементов списка.'),
+    new Attr('name     ','Имя элемента для отправки на сервер или обращения через скрипты.'),
+    new Attr('required ','Список обязателен для выбора перед отправкой формы.'),
+    new Attr('size     ','Количество отображаемых строк списка.'),
+    new Attr('tabindex ','Определяет последовательность перехода между элементами при нажатии на клавишу'),
+])
+console.log(select);
