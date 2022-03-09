@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap{
+            margin: 10px;
+        }
+        .wrap > form{
+            padding: 10px 10px 10px 10px;
+            width: 370px;
+        }
+        .wrap>form{
+            border: 1px solid black;
+        }
+        table {
+            border: 1px solid grey;
+        }
+
+        td,th {
+            padding: 10px   20px;
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <form action="" name="form1">
+        <input type="text" placeholder="name">
+        <input type="text" placeholder="surname">
+    </form>
+    <form action="" name="form2">
+        <input type="text" placeholder="age">
+        <input type="text" placeholder="address">
+    </form>
+
+    <button id="getInfo">Get forms info</button>
+
+    <form action="" name="f3">
+        <input type="number" placeholder="Кількість рядків" name="numsTr">
+        <input type="number" placeholder="Кількість ячєєк" name="numsTh">
+        <input type="text" placeholder="Вміст ячєєк" name="val">
+        <button>Create table</button>
+    </form>
+
+    <form action="" name="f4">
+        <input type="text" name="words" id="words">
+        <button>Check bad words</button>
+    </form>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
