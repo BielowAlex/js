@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .popup {
+            position: fixed;
+            left: 100%;
+            background: brown;
+            color: white;
+            width: 100%;
+            height: 100%;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+
+        .left {
+            display: none;
+        }
+
+        .silver {
+            background: silver;
+        }
+
+        .right {
+            right: 100%;
+        }
+
+        .grey {
+            background: #3b3b3b;
+        }
+
+        .wrap {
+            width: 100%;
+
+        }
+
+        .wrap > .img__list {
+            width: 250px;
+            height: 400px;
+            margin: 10px auto;
+            display: flex;
+            column-gap: 100px;
+            justify-content: center;
+            overflow: hidden;
+
+        }
+
+        .img__list > img {
+            position: absolute;
+            width: 250px;
+            height: 400px;
+        }
+
+        .wrap > .buttons {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 10px;
+        }
+
+        .buttons > div {
+            width: 50px;
+            height: 10px;
+            border-radius: 30px;
+
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="block1" id="b1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores, assumenda
+    delectus eligendi, facilis
+    molestias officia officiis omnis porro quas quibusdam quidem repellat repudiandae? Ab accusantium alias aspernatur,
+    aut delectus deleniti dolore eaque eius exercitationem hic labore natus nemo nisi non numquam officia placeat quam
+    quas quisquam quo ratione repellendus repudiandae sunt temporibus vel velit voluptatem voluptatum. A at autem beatae
+    commodi cum cumque debitis doloremque ea eligendi eum ex excepturi explicabo facilis fuga harum illo, illum
+    inventore ipsam laborum libero magnam maiores minima molestias necessitatibus, nemo nesciunt nobis obcaecati
+    perferendis placeat quae quam quia quod saepe soluta vitae voluptates.
+</div>
+<br>
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi at cum dolores ea error, esse facilis
+    inventore neque nesciunt nostrum officiis perspiciatis sequi! Cumque deserunt doloremque ex fuga in, iste itaque
+    molestiae non quam quibusdam. Aliquid consectetur ea enim eveniet exercitationem facere in incidunt inventore ipsum
+    laudantium minus quas, rem rerum? Aperiam asperiores assumenda dicta doloremque ducimus ea esse illum impedit
+    laborum magni maxime, minus nam nisi odit omnis perspiciatis placeat quae quibusdam quisquam quod recusandae
+    repellendus sequi voluptatem? Accusantium alias corporis dicta doloremque dolores eius est ex expedita fugit illum,
+    impedit ipsum quos repellendus rerum sint temporibus voluptas.
+</div>
+<br>
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dignissimos dolorum inventore mollitia nemo
+    possimus quia! Adipisci beatae consectetur doloribus dolorum, eius error ex exercitationem harum id incidunt
+    inventore itaque iure iusto minima nam nemo nostrum nulla perspiciatis porro provident qui ratione repellat
+    repudiandae temporibus tenetur totam unde, vero? Alias animi atque autem consectetur deleniti dicta dolorem ea earum
+    eligendi eveniet ipsa maiores mollitia odio optio quasi, sint velit veniam voluptas. Assumenda itaque, labore minus
+    placeat quia quidem similique! Doloremque harum nostrum placeat unde? A delectus dignissimos enim expedita placeat
+    repudiandae, sit tempore unde vero vitae? A blanditiis non possimus!
+</div>
+<br>
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolore doloremque et expedita, impedit in
+    inventore ipsa maiores nobis, odit quae quos ratione soluta ullam voluptas. Ad amet aperiam asperiores aspernatur
+    autem blanditiis consequatur consequuntur culpa cupiditate dicta dolor doloremque eius, eos est excepturi
+    exercitationem fugiat hic iure labore libero modi molestiae natus nesciunt nulla obcaecati odio officia pariatur
+    perspiciatis placeat quam reprehenderit repudiandae similique voluptate. Adipisci deserunt eos, explicabo fugit
+    quisquam voluptate voluptates! Accusantium at harum iusto repellendus rerum. Explicabo id illum mollitia quia
+    quisquam sed? Aliquid asperiores blanditiis consequuntur est excepturi illum minus non, porro sapiente ullam, unde.
+</div>
+<br>
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque eos error excepturi fugiat molestias mollitia quia
+    reiciendis tenetur vel. Hic laudantium quis quo sunt! Deleniti dolorem enim error fuga ipsum iste recusandae sequi
+    suscipit. Accusamus animi debitis, dolorem dolorum fugit odio officia, optio perferendis perspiciatis qui quo,
+    ratione ut veritatis. A debitis dolorum expedita officiis porro. Ad debitis dolor dolorem dolores eaque eius esse
+    eum eveniet ex fugiat id in labore magni, molestiae officia officiis quae quos recusandae rem reprehenderit
+    repudiandae sed sint suscipit tempora temporibus ullam veritatis vero voluptas voluptate voluptatibus. Accusantium
+    blanditiis maiores quibusdam quidem sapiente unde. Minus?
+</div>
+<br>
+
+<input type="checkbox" name="status" id="status">Status: false
+<input type="checkbox" name="age" id="age">Age >= 29
+<input type="checkbox" name="city" id="city">City: Kiev
+
+
+<div class="wrap">
+
+    <div class="img__list" id="imgList">
+        <img src="https://upload.wikimedia.org/wikipedia/en/e/ec/Lisa_Simpson.png" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/ru/0/0b/Marge_Simpson.png" alt="">
+        <img src="http://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png" alt="">
+    </div>
+
+    <div class="buttons" id="btns">
+        <button id="previous">Previous</button>
+        <div id="l1"></div>
+        <div id="l2"></div>
+        <div id="l3"></div>
+        <button id="next">Next</button>
+    </div>
+</div>
+
+
+<div class="popup" id="popup">
+    <div class="top">
+        <div class="lol"></div>
+    </div>
+    <div class="top2">
+        <div class="lol"></div>
+    </div>
+</div>
+<br>
+
+<p id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores consequuntur non nostrum
+    officiis! Accusamus adipisci aliquam aliquid aperiam aspernatur aut consectetur consequatur, cumque debitis deserunt
+    dicta dolore dolorem ea esse eveniet ex harum id illo impedit laboriosam laudantium maxime modi nobis nostrum omnis
+    perferendis possimus quaerat quam, qui quo reprehenderit sit temporibus tenetur ullam veniam voluptate voluptatum.
+    A, ab ad architecto corporis distinctio dolores error est eum facere fugiat fugit in magnam modi nemo nisi numquam
+    perspiciatis possimus provident qui, quis quod ratione rerum ut veniam voluptates voluptatibus voluptatum?
+    Asperiores atque aut eaque enim labore maiores placeat, sapiente veniam!</p>
+<script src="js/main.js"></script>
+</body>
+</html>
