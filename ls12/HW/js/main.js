@@ -53,21 +53,24 @@ fetch('https://jsonplaceholder.typicode.com/comments')
         for (const comment of comments) {
             let divComment = document.createElement('div')
             divComment.classList.add('comment');
+
             let user = document.createElement('div');
             user.classList.add('user')
-
 
             for (const commentKey in comment) {
 
                 if ((commentKey === 'name') || (commentKey === 'id') || (commentKey === 'email')) {
                     let el = document.createElement('h3');
                     el.innerHTML = `${commentKey}: ${comment[commentKey]}`;
+
                     user.appendChild(el);
                     divComment.appendChild(user);
+
                 } else if (commentKey === 'body') {
                     let el = document.createElement('p');
                     el.classList.add('el');
                     el.innerHTML = `${comment[commentKey]} `;
+
                     divComment.appendChild(el);
                 }
 
