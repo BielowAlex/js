@@ -1,0 +1,48 @@
+.user_int{
+  padding: 20px;
+  border: 1px solid black;
+  background: #3b3b3b;
+}
+
+.user_list{
+  list-style-type: none;
+  font-size: 20px;
+  padding: 0;
+  background: #fff;
+  li{
+    padding: 10px;
+    border: 1px solid black;
+  }
+}
+
+.post {
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 10px;
+  background: #fff;
+  .el {
+    border-left: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
+.to_upper {
+  text-transform: uppercase;
+}
+
+.comment {
+  background: antiquewhite;
+  border: 1px solid black;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 100px  ;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+}
+
+
