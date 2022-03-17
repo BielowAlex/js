@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  background: #FFEB7B;
+}
+
+.wrap {
+  width: 60%;
+  margin: 50px auto;
+  border: 2px solid #ce8603;
+  padding: 10px;
+  color: white;
+  border-radius: 20px;
+  background: url("https://img.freepik.com/free-vector/banana-background-desktop-wallpaper-cute-vector_53876-136880.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+.wrap h1 {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 300px;
+  color: white;
+  border: 2px solid #ce8603;
+  background: #FFEB7B;
+  text-shadow: #ce8603 1px 1px;
+  font-size: 64px;
+  bottom: 50px;
+  border-radius: 20px;
+  transition: all ease 0.4s;
+}
+.wrap h1:hover {
+  transform: scale(1.1);
+}
+.wrap form {
+  display: flex;
+  flex-direction: column;
+}
+.wrap form h3 {
+  color: #ce8603;
+  margin-right: 10px;
+  font-size: 24px;
+  width: 50%;
+}
+.wrap form input {
+  width: 50%;
+  margin: 10px 0;
+  padding: 5px;
+  border: 2px solid #ce8603;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #ce8603;
+}
+.wrap form input[type=number] {
+  width: 20%;
+}
+.wrap form button {
+  margin: 30px auto;
+  font-size: 24px;
+  color: #ce8603;
+  border: 2px solid #ce8603;
+  background: white;
+  border-radius: 10px;
+  transition: all ease 0.6s;
+}
+.wrap form button:hover {
+  background: #ce8603;
+  color: white;
+  transform: scale(1.1);
+}
+
+.btn {
+  width: 600px;
+  margin: 20px auto;
+}
+.btn a {
+  text-decoration: none;
+  color: #ce8603;
+  border: 2px solid #ce8603;
+  background: white;
+  text-shadow: #ce8603 1px 1px;
+  font-size: 64px;
+  bottom: 50px;
+  border-radius: 20px;
+  padding: 5px;
+  transition: all ease 0.6s;
+}
+.btn a:hover {
+  background: #ce8603;
+  color: white;
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=addProduct.css.map */
