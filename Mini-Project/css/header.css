@@ -1,0 +1,62 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 15px;
+  overflow: hidden;
+  column-gap: 10px;
+  background: #517397;
+  border-radius: 0 0 10px 10px;
+}
+header .first {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+header .first input {
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+}
+header .first .logo {
+  display: flex;
+  align-items: center;
+}
+header .first .logo span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background: white;
+  color: #517397;
+  width: 40px;
+  height: 40px;
+  font-size: 32px;
+  border-radius: 10px;
+}
+header .first .logo h1 {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+}
+header nav {
+  list-style-type: none;
+  display: inline-flex;
+  column-gap: 20px;
+  justify-content: right;
+}
+header nav li a {
+  color: white;
+  font-weight: bold;
+  transition: all ease 0.6s;
+}
+header nav li a:hover {
+  color: #c7d5fa;
+}
+
+/*# sourceMappingURL=header.css.map */

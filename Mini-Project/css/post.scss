@@ -1,0 +1,112 @@
+@import "nullStyle";
+@import "header";
+
+.body {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  .menu {
+    width: 19%;
+    list-style-type: none;
+
+    li {
+      margin: 10px 0;
+
+      a {
+        color: #507299;
+      }
+    }
+  }
+
+  .info {
+    border: 3px solid #DEE5EB;
+    //border-right: ;
+    //border-left:3px solid #DEE5EB ;
+    width: 90%;
+
+    .page_name {
+      background: #DEE5EB;
+      padding: 5px;
+
+      h2 {
+        color: #507299;
+        font-weight: bold;
+      }
+    }
+    .comments {
+      margin: 5px;
+      .head {
+        width: 100%;
+        margin-top: 10px;
+        span {
+          display: block;
+          padding: 5px;
+          font-size: 18px;
+          color: #507299;
+          width: 100%;
+          font-weight: bold;
+          background: #DEE5EB;
+        }
+      }
+
+      .comment {
+        border:3px solid #DEE5EB ;
+        padding: 5px;
+        h2{
+          color: #507299;
+          font-size: 24px;
+          font-weight: bold;
+
+        }
+        p{
+          margin: 20px 0;
+          font-size: 18px;
+        }
+
+      }
+
+    }
+
+    .posts {
+      padding: 5px;
+
+      .post {
+        padding: 10px;
+        border-bottom: 3px solid #DEE5EB;
+
+        h2 {
+          color: #507299;
+          font-size: 24px;
+          font-weight: bold;
+
+        }
+
+        h3 {
+          margin: 5px 0;
+          color: #DEE5EB;
+        }
+
+        p {
+          margin: 20px 0;
+          font-size: 18px;
+        }
+
+
+
+      }
+
+
+
+    }
+
+
+  }
+
+
+}
+
+
+
+

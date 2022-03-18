@@ -1,0 +1,212 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 15px;
+  overflow: hidden;
+  column-gap: 10px;
+  background: #517397;
+  border-radius: 0 0 10px 10px;
+}
+header .first {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+header .first input {
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+}
+header .first .logo {
+  display: flex;
+  align-items: center;
+}
+header .first .logo span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background: white;
+  color: #517397;
+  width: 40px;
+  height: 40px;
+  font-size: 32px;
+  border-radius: 10px;
+}
+header .first .logo h1 {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+}
+header nav {
+  list-style-type: none;
+  display: inline-flex;
+  column-gap: 20px;
+  justify-content: right;
+}
+header nav li a {
+  color: white;
+  font-weight: bold;
+  transition: all ease 0.6s;
+}
+header nav li a:hover {
+  color: #c7d5fa;
+}
+
+.body {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.body .menu {
+  width: 19%;
+  list-style-type: none;
+}
+.body .menu li {
+  margin: 10px 0;
+}
+.body .menu li a {
+  color: #507299;
+}
+.body .info {
+  border: 3px solid #DEE5EB;
+  width: 90%;
+}
+.body .info .page_name {
+  background: #DEE5EB;
+  padding: 5px;
+}
+.body .info .page_name h2 {
+  color: #507299;
+  font-weight: bold;
+}
+.body .info .comments {
+  margin: 5px;
+}
+.body .info .comments .head {
+  width: 100%;
+  margin-top: 10px;
+}
+.body .info .comments .head span {
+  display: block;
+  padding: 5px;
+  font-size: 18px;
+  color: #507299;
+  width: 100%;
+  font-weight: bold;
+  background: #DEE5EB;
+}
+.body .info .comments .comment {
+  border: 3px solid #DEE5EB;
+  padding: 5px;
+}
+.body .info .comments .comment h2 {
+  color: #507299;
+  font-size: 24px;
+  font-weight: bold;
+}
+.body .info .comments .comment p {
+  margin: 20px 0;
+  font-size: 18px;
+}
+.body .info .posts {
+  padding: 5px;
+}
+.body .info .posts .post {
+  padding: 10px;
+  border-bottom: 3px solid #DEE5EB;
+}
+.body .info .posts .post h2 {
+  color: #507299;
+  font-size: 24px;
+  font-weight: bold;
+}
+.body .info .posts .post h3 {
+  margin: 5px 0;
+  color: #DEE5EB;
+}
+.body .info .posts .post p {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=post.css.map */

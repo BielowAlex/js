@@ -1,0 +1,81 @@
+@import "nullStyle.css";
+@import "header";
+
+.body{
+  color: black;
+}
+
+
+.body{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 15px;
+  .menu{
+    width: 19%;
+    list-style-type: none;
+    li{
+      margin: 10px 0;
+      a{
+        color: #507299;
+      }
+    }
+  }
+
+  .info{
+    border: 3px solid #DEE5EB;
+    //border-right: ;
+    //border-left:3px solid #DEE5EB ;
+    width: 90%;
+    .page_name{
+      background: #DEE5EB;
+      padding: 5px;
+      h2{
+        color: #507299;
+        font-weight: bold;
+      }
+    }
+
+    .users_list{
+      margin: 10px;
+
+      .user{
+        display: flex;
+        padding: 10px;
+        border-bottom: 3px solid #DEE5EB;
+        img{
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+        }
+
+        .desc{
+          color:#507299 ;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+
+          h3{
+            font-size: 18px;
+            font-weight: bold;
+          }
+          p{
+            color: #DEE5EB;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+          a{
+            color:#507299 ;
+          }
+      }
+
+
+      }
+
+    }
+
+  }
+
+}
