@@ -44,18 +44,18 @@ header .first .logo h1 {
   font-weight: bold;
   font-size: 28px;
 }
-header nav {
+header .nav {
   list-style-type: none;
   display: inline-flex;
   column-gap: 20px;
   justify-content: right;
 }
-header nav li a {
+header .nav li a {
   color: white;
   font-weight: bold;
   transition: all ease 0.6s;
 }
-header nav li a:hover {
+header .nav li a:hover {
   color: #c7d5fa;
 }
 
